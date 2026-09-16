@@ -16,6 +16,8 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
 $menu_items = [
     ['url' => 'dashboard.php', 'icon' => 'th-large', 'label' => 'Dashboard', 'page' => 'dashboard'],
     ['url' => 'profil-admin.php', 'icon' => 'school', 'label' => 'Profil Sekolah', 'page' => 'profil-admin'],
+    ['url' => 'guru-admin.php', 'icon' => 'user-tie', 'label' => 'Guru', 'page' => 'guru-admin'],
+    ['url' => 'staff-admin.php', 'icon' => 'users', 'label' => 'Staff', 'page' => 'staff-admin'],
     ['url' => 'berita-admin.php', 'icon' => 'newspaper', 'label' => 'Berita', 'page' => 'berita-admin'],
     ['url' => 'program-admin.php', 'icon' => 'graduation-cap', 'label' => 'Program Keahlian', 'page' => 'program-admin'],
     ['url' => 'galeri-admin.php', 'icon' => 'images', 'label' => 'Galeri', 'page' => 'galeri-admin'],
@@ -38,7 +40,7 @@ $menu_items = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/admin.css">
 </head>
 <body class="admin-body">
 
@@ -87,7 +89,7 @@ $menu_items = [
         </div>
 
         <div class="topbar-right">
-            <a href="../index.php" target="_blank" class="topbar-link" title="Lihat Website">
+            <a href="<?= BASE_URL ?>index.php" target="_blank" class="topbar-link" title="Lihat Website">
                 <i class="fas fa-external-link-alt"></i>
             </a>
             <div class="topbar-user">
