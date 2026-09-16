@@ -19,7 +19,7 @@ $socials = db_fetch_all("SELECT * FROM social_media WHERE is_active = 1 ORDER BY
                 <p class="footer-desc"><?= e(truncate($school['tagline'] ?? 'Sekolah Menengah Kejuruan unggulan di Bogor.', 120)) ?></p>
                 <div class="footer-social">
                     <?php foreach ($socials as $social): ?>
-                        <?php if (!empty($social['url']) && $social['url'] !== "#"): ?><a href="<?= e($social['url']) ?>" target="_blank" rel="noopener" aria-label="<?= e($social['platform']) ?>" class="social-icon">
+                        <?php if (!empty($social['url']) && $social['url'] !== "#"): ?><a href="<?= e($social['url']) ?>" target="_blank" rel="noopener" aria-label="<?= e($social['platform']) ?>" title="<?= e($social['platform']) ?>">
                             <i class="fab fa-<?= e($social['icon'] ?? $social['platform']) ?>"></i>
                         </a><?php endif; ?>
                     <?php endforeach; ?>
@@ -43,12 +43,12 @@ $socials = db_fetch_all("SELECT * FROM social_media WHERE is_active = 1 ORDER BY
             <div class="footer-col">
                 <h4 class="footer-heading">Informasi</h4>
                 <ul class="footer-links">
+                    <li><a href="<?= BASE_URL ?>guru.php">Guru</a></li>
+                    <li><a href="<?= BASE_URL ?>staff.php">Staff</a></li>
                     <li><a href="<?= BASE_URL ?>ppdb.php">PPDB Online</a></li>
                     <li><a href="<?= BASE_URL ?>cek-status.php">Cek Status PPDB</a></li>
                     <li><a href="<?= BASE_URL ?>berita.php">Berita</a></li>
-                    <li><a href="<?= BASE_URL ?>prestasi.php">Prestasi</a></li>
                     <li><a href="<?= BASE_URL ?>galeri.php">Galeri</a></li>
-                    <li><a href="<?= BASE_URL ?>fasilitas.php">Fasilitas</a></li>
                 </ul>
             </div>
 
@@ -84,5 +84,6 @@ $socials = db_fetch_all("SELECT * FROM social_media WHERE is_active = 1 ORDER BY
 
 <!-- JavaScript -->
 <script src="<?= BASE_URL ?>assets/js/script.js"></script>
+<script src="<?= BASE_URL ?>assets/js/admin.js"></script>
 </body>
 </html>

@@ -12,6 +12,8 @@ $nav_items = [
     ['url' => BASE_URL . 'sambutan.php', 'label' => 'Sambutan', 'page' => 'sambutan'],
     ['url' => BASE_URL . 'struktur.php', 'label' => 'Struktur', 'page' => 'struktur'],
     ['url' => BASE_URL . 'akademik.php', 'label' => 'Akademik', 'page' => 'akademik'],
+    ['url' => BASE_URL . 'guru.php', 'label' => 'Guru', 'page' => 'guru'],
+    ['url' => BASE_URL . 'staff.php', 'label' => 'Staff', 'page' => 'staff'],
     ['url' => BASE_URL . 'fasilitas.php', 'label' => 'Fasilitas', 'page' => 'fasilitas'],
     ['url' => BASE_URL . 'berita.php', 'label' => 'Berita', 'page' => 'berita'],
     ['url' => BASE_URL . 'prestasi.php', 'label' => 'Prestasi', 'page' => 'prestasi'],
